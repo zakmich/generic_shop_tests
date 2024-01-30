@@ -17,6 +17,7 @@ test.describe("User login to Generic shop", () => {
     await page.getByRole("button", { name: "Login" }).click();
 
     // Assert
-    await expect(page.locator('.page-title.margin-top')).toContainText(['My account']);
+    // await expect(page.locator('.page-title.margin-top')).toContainText(['My account']);
+    await expect(page.locator('xpath=//h1[@class="page-title margin-top"]')).toContainText(['My account']);
   });
 });
