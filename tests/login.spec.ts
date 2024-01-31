@@ -1,4 +1,5 @@
 import { test, expect } from "@playwright/test";
+import { loginData } from "../test-data/login.data";
 
 test.describe("User login to Generic shop", () => {
   test.beforeEach(async ({ page }) => {
@@ -7,8 +8,8 @@ test.describe("User login to Generic shop", () => {
 
   test("succesful login to shop", async ({ page }) => {
     //Arange
-    const username = "fakeuser1@gmail.com";
-    const userPassword = "testowehaslo1234";
+    const username = loginData.username
+    const userPassword = loginData.userPassword
 
     //Act
     await page.getByRole("link", { name: " Account" }).click();
