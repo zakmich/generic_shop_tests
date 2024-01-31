@@ -20,7 +20,6 @@ test.describe("User login to Generic shop", () => {
     await loginpage.loginButton.click();
 
     // Assert
-    // await expect(page.locator('.page-title.margin-top')).toContainText(['My account']);
     await expect(loginpage.assert).toContainText(["My account"]);
   });
 });
