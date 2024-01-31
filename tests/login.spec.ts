@@ -1,5 +1,6 @@
 import { test, expect } from "@playwright/test";
 import { loginData } from "../test-data/login.data";
+import { LoginPage } from "../pages/login.page";
 
 test.describe("User login to Generic shop", () => {
   test.beforeEach(async ({ page }) => {
@@ -8,17 +9,18 @@ test.describe("User login to Generic shop", () => {
 
   test("succesful login to shop", async ({ page }) => {
     //Arange
-    const username = loginData.username
-    const userPassword = loginData.userPassword
+    const username = loginData.username;
+    const userPassword = loginData.userPassword;
 
     //Act
-    await page.getByRole("link", { name: " Account" }).click();
-    await page.getByLabel("Username or email address *").fill(username);
-    await page.locator("#password").fill(userPassword);
-    await page.getByRole("button", { name: "Login" }).click();
+    const loginpage = new LoginPage(page);
+    await loginpage.accountLink.click();
+    await loginpage.username.fill(username);
+    await loginpage.password.fill(userPassword);
+    await loginpage.loginButton.click();
 
     // Assert
     // await expect(page.locator('.page-title.margin-top')).toContainText(['My account']);
-    await expect(page.locator('xpath=//h1[@class="page-title margin-top"]')).toContainText(['My account']);
+    await expect(loginpage.assert).toContainText(["My account"]);
   });
 });
