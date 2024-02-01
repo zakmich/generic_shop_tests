@@ -8,4 +8,6 @@ export class LoginPage {
     password = this.page.locator("#password");
     loginButton = this.page.getByRole("button", { name: "Login" });
     assert = this.page.locator('xpath=//p[contains(text(),"Hello")]');
+
+    passwordError = this.page.locator('xpath=//div[@class="site-content"]//li[1]');
 }
