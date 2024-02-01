@@ -11,6 +11,7 @@ test.describe("User login to Generic shop", () => {
     //Arange
     const username = loginData.username;
     const userPassword = loginData.userPassword;
+    const text = "My account";
 
     //Act
     const loginpage = new LoginPage(page);
@@ -20,6 +21,6 @@ test.describe("User login to Generic shop", () => {
     await loginpage.loginButton.click();
 
     // Assert
-    await expect(loginpage.assert).toContainText(["My account"]);
+    await expect(loginpage.assert).toContainText([text]);
   });
 });
