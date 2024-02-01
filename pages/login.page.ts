@@ -7,5 +7,5 @@ export class LoginPage {
     username = this.page.getByLabel("Username or email address *");
     password = this.page.locator("#password");
     loginButton = this.page.getByRole("button", { name: "Login" });
-    assert = this.page.locator('xpath=//h1[@class="page-title margin-top"]');
+    assert = this.page.locator('xpath=//p[contains(text(),"Hello")]');
 }
