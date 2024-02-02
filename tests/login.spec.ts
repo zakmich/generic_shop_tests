@@ -51,9 +51,43 @@ test.describe("User login to Generic shop", () => {
     await expect(loginpage.passwordError).toContainText([passwordErrorMessage]);
   });
 
-  
+  test("unsuccesful login to shop with empty username field and corect password", async ({ page }) => {
+    //Arange
+    const username = ""
+    const userPassword = loginData.inncorectPassword;
+    const emptyUsernameErrorMessage = "Error: Username is required.";
 
-  // (unsuccesful login to shop with empty username field);
-  // (unsuccesful login to shop with empty password field);
-  // (unsuccesful login to shop with both fields empty);
+    //Act
+    await loginpage.login(username, userPassword)
+
+    // Assert
+    await expect(loginpage.emptyUserNameField).toContainText([emptyUsernameErrorMessage]);
+  });
+
+  test("unsuccesful login to shop with correct username and empty password field", async ({ page }) => {
+    //Arange
+    const username = loginData.username
+    const userPassword = ""
+    const emptyPasswordMessage = "Error: The password field is empty.";
+
+    //Act
+    await loginpage.login(username, userPassword)
+
+    // Assert
+    await expect(loginpage.emptyUserNameField).toContainText([emptyPasswordMessage]);
+  });
+
+  test("unsuccesful login to shop with both fields empty", async ({ page }) => {
+    //Arange
+    const username = ""
+    const userPassword = ""
+    const loginFieldsMessage = "Error: Username is required.";
+
+    //Act
+    await loginpage.login(username, userPassword)
+
+    // Assert
+    await expect(loginpage.emptyUserNameField).toContainText([loginFieldsMessage]);
+  });
+
 });
