@@ -3,8 +3,12 @@ import { loginData } from "../test-data/login.data";
 import { LoginPage } from "../pages/login.page";
 
 test.describe("User login to Generic shop", () => {
+  let loginpage: LoginPage;
+
   test.beforeEach(async ({ page }) => {
     await page.goto("/");
+    loginpage = new LoginPage(page);
+
   });
 
   test("succesful login to shop", async ({ page }) => {
@@ -14,11 +18,7 @@ test.describe("User login to Generic shop", () => {
     const loginMessage = "fakeuser1";
 
     //Act
-    const loginpage = new LoginPage(page);
-    await loginpage.accountLink.click();
-    await loginpage.username.fill(username);
-    await loginpage.password.fill(userPassword);
-    await loginpage.loginButton.click();
+    await loginpage.login(username, userPassword)
 
     // Assert
     await expect(loginpage.assert).toContainText([loginMessage]);
@@ -31,11 +31,7 @@ test.describe("User login to Generic shop", () => {
     const passwordErrorMessage = "Error: A user could not be found with this email address.";
 
     //Act
-    const loginpage = new LoginPage(page);
-    await loginpage.accountLink.click();
-    await loginpage.username.fill(username);
-    await loginpage.password.fill(userPassword);
-    await loginpage.loginButton.click();
+    await loginpage.login(username, userPassword)
 
     // Assert
     await expect(loginpage.passwordError).toContainText([passwordErrorMessage]);
