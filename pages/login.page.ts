@@ -8,9 +8,11 @@ export class LoginPage {
     username = this.page.getByLabel("Username or email address *");
     password = this.page.locator("#password");
     loginButton = this.page.getByRole("button", { name: "Login" });
-    assert = this.page.locator('xpath=//p[contains(text(),"Hello")]');
+    assert = this.page.locator('//p[contains(text(),"Hello")]');
     
-    passwordError = this.page.locator('xpath=//div[@class="site-content"]//li[1]');
+    userNameError = this.page.locator('//div[@class="site-content"]//li[1]');
+    passwordError = this.page.locator('//li[contains(text(),"The password you entered for the username")]')
+    
     
     async login(username: string, userPassword: string): Promise<void>{
         await this.accountLink.click();
