@@ -11,7 +11,7 @@ export class LoginPage {
     
     assert = this.page.locator('//p[contains(text(),"Hello")]');
     userNameError = this.page.locator('//div[@class="site-content"]//li[1]');
-    passwordError = this.page.locator('//li[contains(text(),"The password you entered for the username")]')
+    passwordError = this.page.locator('//li[contains(text(),"The password")]')
     emptyUserNameField = this.page.locator('//div[@class="site-content"]//li[1]')
     
     async login(username: string, userPassword: string): Promise<void>{
