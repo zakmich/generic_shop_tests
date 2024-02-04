@@ -1,6 +1,6 @@
 # Test Automation training with Playwright
 
-- This project presents several examples of using the `Playwright` framework in test automation with `Typescript`. The testd site is demo of a shop.
+This project presents several examples of using the `Playwright` framework in test automation with `Typescript`. The testd site is demo of a shop.
 
 ## Patterns used in the project:
 
