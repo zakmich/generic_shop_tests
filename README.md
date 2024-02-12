@@ -28,12 +28,6 @@ npx playwright install --with-deps chromium
 
 ## Use/Commands
 
-Run all tests:
-
-```
-npx playwright test
-```
-
 Run tests without browser GUI:
 
 ```
