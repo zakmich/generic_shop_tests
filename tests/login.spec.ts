@@ -11,8 +11,8 @@ test.describe("User login to Generic shop", () => {
 
   });
 
-  test("succesful login to shop with correct credentials", async ({ page }) => {
-    //Arange
+  test("successful login to shop with correct credentials", async ({ page }) => {
+    //Arrange
     const username = loginData.username;
     const userPassword = loginData.userPassword;
     const loginMessage = "fakeuser1";
@@ -24,8 +24,8 @@ test.describe("User login to Generic shop", () => {
     await expect(loginpage.assert).toContainText([loginMessage]);
   });
 
-  test("unsuccesful login to shop with inccorect username and correct password", async ({ page }) => {
-    //Arange
+  test("unsuccessful login to shop with incorrect username and correct password", async ({ page }) => {
+    //Arrange
     const username = loginData.incorrectUsername;
     const userPassword = loginData.userPassword;
     const userNameErrorMessage = "Error: A user could not be found with this email address.";
@@ -38,10 +38,10 @@ test.describe("User login to Generic shop", () => {
   });
 
   
-  test("unsuccesful login to shop with correct username and inccorect password", async ({ page }) => {
-    //Arange
+  test("unsuccessful login to shop with correct username and incorrect password", async ({ page }) => {
+    //Arrange
     const username = loginData.username;
-    const userPassword = loginData.inncorectPassword;
+    const userPassword = loginData.incorrectPassword;
     const passwordErrorMessage = "Error: The password you entered for the username fakeuser1@gmail.com is incorrect.";
 
     //Act
@@ -51,10 +51,10 @@ test.describe("User login to Generic shop", () => {
     await expect(loginpage.passwordError).toContainText([passwordErrorMessage]);
   });
 
-  test("unsuccesful login to shop with empty username field and corect password", async ({ page }) => {
-    //Arange
+  test("unsuccessful login to shop with empty username field and correct password", async ({ page }) => {
+    //Arrange
     const username = ""
-    const userPassword = loginData.inncorectPassword;
+    const userPassword = loginData.incorrectPassword;
     const emptyUsernameErrorMessage = "Error: Username is required.";
 
     //Act
@@ -64,8 +64,8 @@ test.describe("User login to Generic shop", () => {
     await expect(loginpage.emptyUserNameField).toContainText([emptyUsernameErrorMessage]);
   });
 
-  test("unsuccesful login to shop with correct username and empty password field", async ({ page }) => {
-    //Arange
+  test("unsuccessful login to shop with correct username and empty password field", async ({ page }) => {
+    //Arrange
     const username = loginData.username
     const userPassword = ""
     const emptyPasswordMessage = "Error: The password field is empty.";
@@ -77,8 +77,8 @@ test.describe("User login to Generic shop", () => {
     await expect(loginpage.emptyUserNameField).toContainText([emptyPasswordMessage]);
   });
 
-  test("unsuccesful login to shop with both fields empty", async ({ page }) => {
-    //Arange
+  test("unsuccessful login to shop with both fields empty", async ({ page }) => {
+    //Arrange
     const username = ""
     const userPassword = ""
     const loginFieldsMessage = "Error: Username is required.";

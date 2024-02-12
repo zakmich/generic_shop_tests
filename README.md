@@ -16,7 +16,7 @@ This project presents several examples of using the `Playwright` framework in te
 ### Local recommended tools:
 
 - VS Code
-- Node.js (version >16)
+- Node.js (version >18)
 
 ### Installation and setup
 
