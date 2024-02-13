@@ -16,10 +16,10 @@
 * **Test ID:** TC01
 * **Description:** User successfully logs in with valid username and password.
 * **Test Steps:**
-    1.  Open the shop website login page.
-    2.  Enter a valid username in the username field.
-    3.  Enter the corresponding correct password in the password field.
-    4.  Click the "Login" button.
+1. Open the shop website login page.
+2. Enter a valid username in the username field.
+3. Enter the corresponding correct password in the password field.
+4. Click the "Login" button.
 * **Expected Result:**
     1. User gets redirected to the user panel.
     2. A welcome message greets the user by name.
