@@ -43,6 +43,11 @@ Run tests with browser GUI:
 npx playwright test --headed
 ```
 
+Run test by tag:
+```
+npx playwright test --grep "@TC01"
+```
+
 View report:
 
 ```
