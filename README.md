@@ -1,6 +1,9 @@
 # Test Automation training with Playwright
 
-This project presents several examples of using the `Playwright` framework in test automation with `Typescript`. The tested site is demo of a shop.
+This project presents several examples of using the `Playwright` framework in test automation with `Typescript`. The tested site is demo of a shop, current tests covers login page.
+
+## Test Cases
+- You can find test cases in project main catalog or by direct [Click](https://github.com/zakmich/generic_shop_tests/blob/main/TEST-CASE.md)
 
 ## Links
 
