@@ -28,6 +28,10 @@ setup Playwright with:
 ```
 npx playwright install --with-deps chromium
 ```
+Faker - generator of fake data for register test:
+```
+npm install --save-dev @faker-js/faker
+```
 
 ## Use/Commands
 
@@ -42,11 +46,16 @@ Run tests with browser GUI:
 ```
 npx playwright test --headed
 ```
+Run test in UI mode
+```
+npx playwright test --ui
+```
 
 Run test by tag:
 ```
 npx playwright test --grep "@TC01"
 ```
+
 
 View report:
 
