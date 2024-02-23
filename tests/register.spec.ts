@@ -5,14 +5,13 @@ import { RegisterPage } from '../pages/register.page';
 
 test('register with correct data', async ({ page }) => {
   // Arrange
-  await page.goto("/");
-  await page.getByRole('link', { name: ' Account' }).click();
+  const registerPage = new RegisterPage(page);
+  await registerPage.goto();
   const emailAddress = faker.internet.email({firstName: "Mike"});
   const registerPassword = faker.internet.password({length: 15});
   const loginMessage = "Mike";
   
   //Act
-  const registerPage = new RegisterPage(page);
   await registerPage.emailInput.fill(emailAddress);
   await registerPage.regPasswordInput.fill(registerPassword);
   await page.keyboard.press('Enter');
