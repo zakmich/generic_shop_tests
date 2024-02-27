@@ -11,7 +11,7 @@ test.describe("User login to Generic shop", () => {
 
   });
 
-  test("successful login to shop with correct credentials @TC01", async ({ page }) => {
+  test("successful login to shop with correct credentials @L-TC01", async ({ page }) => {
     //Arrange
     const username = loginData.username;
     const userPassword = loginData.userPassword;
@@ -24,7 +24,7 @@ test.describe("User login to Generic shop", () => {
     await expect(loginpage.assert).toContainText([loginMessage]);
   });
 
-  test("unsuccessful login to shop with incorrect username and correct password@TC02", async ({ page }) => {
+  test("unsuccessful login to shop with incorrect username and correct password @L-TC02", async ({ page }) => {
     //Arrange
     const username = loginData.incorrectUsername;
     const userPassword = loginData.userPassword;
@@ -38,7 +38,7 @@ test.describe("User login to Generic shop", () => {
   });
 
   
-  test("unsuccessful login to shop with correct username and incorrect password@TC03", async ({ page }) => {
+  test("unsuccessful login to shop with correct username and incorrect password @L-TC03", async ({ page }) => {
     //Arrange
     const username = loginData.username;
     const userPassword = loginData.incorrectPassword;
@@ -51,7 +51,7 @@ test.describe("User login to Generic shop", () => {
     await expect(loginpage.passwordError).toContainText([passwordErrorMessage]);
   });
 
-  test("unsuccessful login to shop with empty username field and correct password@TC04", async ({ page }) => {
+  test("unsuccessful login to shop with empty username field and correct password @L-TC04", async ({ page }) => {
     //Arrange
     const username = ""
     const userPassword = loginData.incorrectPassword;
@@ -64,7 +64,7 @@ test.describe("User login to Generic shop", () => {
     await expect(loginpage.emptyUserNameField).toContainText([emptyUsernameErrorMessage]);
   });
 
-  test("unsuccessful login to shop with correct username and empty password field@TC05", async ({ page }) => {
+  test("unsuccessful login to shop with correct username and empty password field @L-TC05", async ({ page }) => {
     //Arrange
     const username = loginData.username
     const userPassword = ""
@@ -77,7 +77,7 @@ test.describe("User login to Generic shop", () => {
     await expect(loginpage.emptyUserNameField).toContainText([emptyPasswordMessage]);
   });
 
-  test("unsuccessful login to shop with both fields empty@TC06", async ({ page }) => {
+  test("unsuccessful login to shop with both fields empty @L-TC06", async ({ page }) => {
     //Arrange
     const username = ""
     const userPassword = ""

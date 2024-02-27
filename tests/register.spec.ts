@@ -3,7 +3,7 @@ import { LoginPage } from "../pages/login.page";
 import { RegisterPage } from "../pages/register.page";
 import { randomRegisterUserData } from "../factories/user.factory";
 
-test("register with correct data", async ({ page }) => {
+test("register with correct data @R-TC01", async ({ page }) => {
   // Arrange
   const registerUserData = randomRegisterUserData();
   const registerPage = new RegisterPage(page);

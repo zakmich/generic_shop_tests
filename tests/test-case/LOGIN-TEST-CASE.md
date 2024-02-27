@@ -13,7 +13,7 @@
 
 **1. Successful Login with Correct Credentials:**
 
-* **Test ID:** TC01
+* **Test ID:** L-TC01
 * **Description:** User successfully logs in with valid username and password.
 * **Test Steps:**
 1. Open the shop website login page.
@@ -27,7 +27,7 @@
 
 **2. Unsuccessful Login with Incorrect Username and Correct Password:**
 
-* **Test ID:** TC02
+* **Test ID:** L-TC02
 * **Description:** User attempts to log in with an incorrect username and correct password.
 * **Test Steps:**
 1. Open the shop website login page.
@@ -41,7 +41,7 @@
 
 **3. Unsuccessful Login with Correct Username and Incorrect Password:**
 
-* **Test ID:** TC03
+* **Test ID:** L-TC03
 * **Description:** User attempts to log in with a correct username and incorrect password.
 * **Test Steps:**
 1. Open the shop website login page.
@@ -55,7 +55,7 @@
 
 **4. Unsuccessful Login with Empty Username Field and Correct Password:**
 
-* **Test ID:** TC04
+* **Test ID:** L-TC04
 * **Description:** User attempts to log in with an empty username field and correct password.
 * **Test Steps:**
 1. Open the shop website login page.
@@ -69,7 +69,7 @@
 
 **5. Unsuccessful Login with Correct Username and Empty Password Field:**
 
-* **Test ID:** TC05
+* **Test ID:** L-TC05
 * **Description:** User attempts to log in with a correct username and empty password field.
 * **Test Steps:**
 1. Open the shop website login page.
@@ -83,7 +83,7 @@
 
 **6. Unsuccessful Login with Both Fields Empty:**
 
-* **Test ID:** TC06
+* **Test ID:** L-TC06
 * **Description:** User attempts to log in with both username and password fields empty.
 * **Test Steps:**
 1. Open the shop website login page.
