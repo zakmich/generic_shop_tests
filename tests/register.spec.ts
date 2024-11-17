@@ -7,6 +7,7 @@ test("register with correct data @R-TC01", async ({ page }) => {
   // Arrange
   const registerUserData = randomRegisterUserData();
   const registerPage = new RegisterPage(page);
+  const loginMessage = "Hello";
 
   //Act
   await registerPage.goto();
@@ -15,7 +16,6 @@ test("register with correct data @R-TC01", async ({ page }) => {
   await page.keyboard.press("Enter");
 
   //  Assert
-  const loginMessage = "Hello";
   const loginpage = new LoginPage(page);
-  await expect(loginpage.assert).toContainText([loginMessage]);
+  await expect(page.getByText(loginMessage)).toBeVisible
 });
