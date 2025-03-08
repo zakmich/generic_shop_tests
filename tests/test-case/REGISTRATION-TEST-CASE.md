@@ -11,7 +11,7 @@
 
 *Test Cases:*
 
-**1. Successful Login with Correct Credentials:**
+**1. Successful Registration with Correct Credentials:**
 
 * **Test ID:** R-TC01
 * **Description:** User successfully register with valid username and password.
